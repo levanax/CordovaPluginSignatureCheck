@@ -1,16 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="top.xuebiao.signature_check" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="top.xuebiao.signature_check" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>CordovaPluginSignatureCheck</name>
     <js-module name="CordovaPluginSignatureCheck" src="www/CordovaPluginSignatureCheck.js">
         <clobbers target="cordova.plugins.CordovaPluginSignatureCheck">
         </clobbers>
     </js-module>
     <platform name="android">
+    	<!--  -->
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="CordovaPluginSignatureCheck">
                 <param name="android-package" value="top.xuebiao.signature_check.CordovaPluginSignatureCheck">
                 </param>
             </feature>
+        	<preference name="APP_SIGN_VALUE" value=""/>
+        	<preference name="APP_SIGN_SALT" value="go-trade-mobile"/>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml">
         </config-file>
