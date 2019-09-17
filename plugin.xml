@@ -17,7 +17,7 @@
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml">
         </config-file>
-        <source-file src="src/android/CordovaPluginSignatureCheck.java" target-dir="src/top/xuebiao/signature_check/CordovaPluginSignatureCheck">
+        <source-file src="src/android/CordovaPluginSignatureCheck.java" target-dir="src/top/xuebiao/signature_check/">
         </source-file>
     </platform>
 </plugin>
