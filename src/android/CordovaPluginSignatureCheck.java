@@ -1,4 +1,4 @@
-package top.xuebiao.signature_check;
+package com.gotrade.signature_check;
 
 import org.apache.cordova.*;
 
