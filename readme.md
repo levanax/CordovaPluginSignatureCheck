@@ -7,11 +7,11 @@
 cordova plugin add https://github.com/levanax/CordovaPluginSignatureCheck.git
 ```
 
-1. 定义配置
+1. 定义配置 config.xml
 
 ```xml
 <!-- apk签名 ，加密salt-->
-<preference name="APP_SIGN_SALT" value="go-trade"/>
+<preference name="APP_SIGN_SALT" value="go-trade-mobile"/>
 
 ```
 
@@ -23,7 +23,7 @@ keytool -list -v -keystore test.keystore
 
 3. 打开下列网址   
 
-http://tool.oschina.net/encrypt?type=2  
+[HmacSHA256 Site](http://tool.oschina.net/encrypt?type=2)  
 使用 HmacSHA256 加密方式，将上面配置的 APP_SIGN_SALT 作为密钥，把第2步拿到的MD5进行加密
 
 4. 将第3步得到加密后的值设置在 APP_SIGN_VALUE
@@ -45,3 +45,10 @@ cordova.plugins.CordovaPluginSignatureCheck.checkSignature(function(data){
     alert(error);
 })
 ```
+
+6. 新增配置 config.xml, 是否启用该插件, value = enabled/disabled
+
+```xml
+<preference name="APP_SIGN_CHECK_STATUS" value="disabled" />
+```
+

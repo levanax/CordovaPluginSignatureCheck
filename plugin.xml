@@ -14,6 +14,7 @@
             </feature>
         	<preference name="APP_SIGN_VALUE" value=""/>
         	<preference name="APP_SIGN_SALT" value="go-trade-mobile"/>
+        	<preference name="APP_SIGN_CHECK_STATUS" value="enable"/>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml">
         </config-file>
