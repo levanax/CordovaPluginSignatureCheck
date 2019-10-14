@@ -51,4 +51,3 @@ cordova.plugins.CordovaPluginSignatureCheck.checkSignature(function(data){
 ```xml
 <preference name="APP_SIGN_CHECK_STATUS" value="disabled" />
 ```
-

@@ -38,9 +38,9 @@ public class CordovaPluginSignatureCheck extends CordovaPlugin {
 
     private void checkSignature(CallbackContext callbackContext) throws JSONException  {
         try {
-            String enable = preferences.getString("APP_SIGN_CHECK_STATUS", "enable");
+            String enable = preferences.getString("APP_SIGN_CHECK_STATUS", "enabled");
             JSONObject callBackResult = null;
-            if(enable.equalsIgnoreCase("enable")){
+            if(enable.equalsIgnoreCase("enabled")){
                 PackageInfo pi = context.getPackageManager().getPackageInfo(context.getPackageName(), PackageManager.GET_SIGNATURES);
                 Signature[] sig = pi.signatures;
                 String signString = getSignatureMD5(sig[0].toByteArray());
